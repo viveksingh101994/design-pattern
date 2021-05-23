@@ -1,0 +1,35 @@
+{
+  "name": "learn-fauna-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "build:watch": "tsc -w",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "coverage": "nyc report",
+    "test:eslint": "eslint src/ --ext .ts,.js",
+    "test:jenkins": "npm run test:prettier && npm run test:eslint && npm run test:unit",
+    "test:prettier": "prettier --list-different \"src/**/*.{js,ts,md}\"",
+    "fix:prettier": "prettier --single-quote --write \"src/**/*.{js,ts,md}\"",
+    "fix:eslint": "eslint --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-sonarjs": "^0.7.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.5.6",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  }
+}
