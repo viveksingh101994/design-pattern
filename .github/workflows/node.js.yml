@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 15.x]
+        node-version: [14.x]
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
@@ -28,6 +28,6 @@ jobs:
     - name: Run prettier test
       run: npm run test:prettier
     - name: Run TSLINT test
-      run: npm run test:tslint
+      run: npm run test:eslint
     - name: Run test cases
       run: npm run test
