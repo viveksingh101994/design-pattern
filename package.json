@@ -14,7 +14,8 @@
     "test:jenkins": "npm run test:prettier && npm run test:eslint && npm run test:unit",
     "test:prettier": "prettier --list-different \"src/**/*.{js,ts,md}\"",
     "fix:prettier": "prettier --single-quote --write \"src/**/*.{js,ts,md}\"",
-    "fix:eslint": "eslint --fix"
+    "fix:eslint": "eslint --fix",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
@@ -27,6 +28,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-sonarjs": "^0.7.0",
+    "husky": "^6.0.0",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
     "ts-jest": "^26.5.6",
